@@ -1,0 +1,3 @@
+class UpdateDatabase {
+  UpdateDatabase() {}
+}

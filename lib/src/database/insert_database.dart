@@ -1,0 +1,4 @@
+
+class InsertDaatabase{
+  InsertDatabase(){}
+}
