@@ -1,6 +1,15 @@
 # myandroidapp
 
-Dasign A Full Android App With Flutter
+Design A Full Android App With Flutter
+
+1- We use the Parallax API to create few pages.
+2- We use the goRouter API to manage the routing of the app .
+3- We use the goRouter API to assign for each parallax page to navigate to a certain page that we assign.
+4- We use the Provider API to handle the fetched data from the database and push to any page.
+5- We use the Postgresql database , we use 2 way for the database:
+    a- We use model class to connect the app to the database.
+    b- We use the Supabase cloud framework .
+
 
 ## Getting Started
 
