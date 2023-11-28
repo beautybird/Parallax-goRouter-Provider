@@ -25,6 +25,7 @@ class CountryCity with ChangeNotifier {
   String? setCountryName(String? countyName){
     _countryName = countyName;
     notifyListeners();
+    return null;
   }
 
   bool? get uae => _uae;

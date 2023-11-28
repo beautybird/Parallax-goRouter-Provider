@@ -22,7 +22,7 @@ class _SellerPlanState extends State<SellerPlan> {
 
   LocaleProvider? localeProvider;
   String? selectedLocaleCode;
-  _SellerPlanState({this.selectedLocaleCode});
+  _SellerPlanState();
 
   List<PlansList>? plans = [
     PlansList(

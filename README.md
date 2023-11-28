@@ -1,6 +1,7 @@
 # myandroidapp
 
-Design A Full Android App With Flutter
+Design A Full Android App With Flutter.
+It's a project in progress :)
 
 1- We use the Parallax API to create few pages.
 
