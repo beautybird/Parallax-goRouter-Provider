@@ -22,7 +22,7 @@ class Models {
   }
 
   List<List>? fetchProductsFuture;
-  Future<List<List>?>? getFetchProducts(String? category) async {
+  Future<List<List>?>? fetch(String? category) async {
     fetchProductsFuture = await FetchDatabase().fetchProductsData(category);
     return fetchProductsFuture!;
   }

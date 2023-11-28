@@ -108,7 +108,7 @@ class _CardsState extends State<Cards> {
                         cardProvider!.category!.isEmpty) {
                       //
                       Models()
-                          .getFetchProducts('First')!
+                          .fetch('First')!
                           .then((productsSearchFuture) {
                         if (productsSearchFuture!.isNotEmpty) {
                           ///We empty the content of the provider from previous searches
@@ -171,7 +171,7 @@ class _CardsState extends State<Cards> {
                     } else {
                       //
                       Models()
-                          .getFetchProducts(cardProvider!.category)!
+                          .fetch(cardProvider!.category)!
                           .then((productsSearchFuture) {
                         if (productsSearchFuture!.isNotEmpty) {
                           ///We empty the content of the provider from previous searches

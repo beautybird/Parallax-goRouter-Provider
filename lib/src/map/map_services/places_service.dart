@@ -1,4 +1,3 @@
-
 import 'package:http/http.dart' as http;
 import 'package:myandroidapp/src/map/map_models/place_name_search.dart';
 import 'dart:convert' as convert;
@@ -6,7 +5,6 @@ import 'dart:convert' as convert;
 import 'package:myandroidapp/src/map/map_models/place_search.dart';
 
 class PlacesService {
-
   http.Response? response;
   http.Response? getPlacesResponse, getPlaceResponse;
   dynamic json, getPlaceJson, getPlacesJson;
