@@ -182,7 +182,8 @@ class _CardsState extends State<Cards> {
                               .setProductsSearchList(productsSearchFuture);
                           if (cardProvider!.category!.contains('Third')) {
                             context.go('/a/makeupRoute');
-                          } else if (cardProvider!.category!.contains('Second')) {
+                          } else if (cardProvider!.category!
+                              .contains('Second')) {
                             context.go('/a/skincareRoute');
                           } else if (cardProvider!.category!
                               .contains('Perfume')) {

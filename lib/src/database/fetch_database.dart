@@ -13,10 +13,10 @@ class FetchDatabase {
       if (!connection!.isOpen || connection == null) {
         connection = await Connection.open(
           Endpoint(
-            host: '192.168.0.127',
-            database: 'bueno',
-            username: 'dmin_bueno',
-            password: 'mosa1209qwerBABIL',
+            host: 'IP address',
+            database: 'DB_name',
+            username: 'DB_user',
+            password: 'DB_password',
             isUnixSocket: false,
           ),
           // The postgres server hosted locally doesn't have SSL by default. If you're
