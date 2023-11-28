@@ -203,55 +203,6 @@ class _SettingsViewState extends State<SettingsView> {
             const SizedBox(
               height: 100.0,
             ),
-            //Share App
-            Flexible(
-              flex: 1,
-              fit: FlexFit.loose,
-              child: Container(
-                constraints: BoxConstraints(
-                  minWidth: 80.0,
-                  maxWidth: 80.0,
-                  minHeight: 60.0,
-                  maxHeight: 60.0,
-                ),
-                child: Card(
-                  color: Colors.green.shade300,
-                  shadowColor: Colors.grey,
-                  surfaceTintColor: Colors.blue,
-                  elevation: 15.0,
-                  shape: const UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.white,
-                      width: 1.0,
-                      style: BorderStyle.solid,
-                    ),
-                    borderRadius: BorderRadius.horizontal(
-                      right: Radius.circular(10.0),
-                      left: Radius.circular(10.0),
-                    ),
-                  ),
-                  borderOnForeground: true,
-                  margin: const EdgeInsets.only(
-                    left: 10.0,
-                  ),
-                  clipBehavior: Clip.hardEdge,
-                  semanticContainer: true,
-                  child: IconButton(
-                    icon: Icon(
-                      Icons.share,
-                      size: 25.0,
-                      color: Colors.white,
-                    ),
-                    iconSize: 25.0,
-                    onPressed: () =>
-                        Navigator.pushNamed(context, "/shareappPage"),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 60.0,
-            ),
           ],
         ),
       ),

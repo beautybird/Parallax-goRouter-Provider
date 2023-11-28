@@ -6,6 +6,7 @@ import 'package:myandroidapp/src/routes/contactus.dart';
 import 'package:myandroidapp/src/routes/forgot_password.dart';
 import 'package:myandroidapp/src/routes/login.dart';
 import 'package:myandroidapp/src/routes/noproducts_page.dart';
+import 'package:myandroidapp/src/routes/shareapp.dart';
 import 'package:myandroidapp/src/routes/signup.dart';
 import 'package:myandroidapp/src/routes/splash.dart';
 import 'package:myandroidapp/src/routing_conf/nestedNAvigator.dart';
@@ -61,24 +62,25 @@ final goRouter = GoRouter(
           navigatorKey: _shellNavigatorHomeKey,
           routes: [
             GoRoute(
-              path: '/a',
-              pageBuilder: (context, state) => NoTransitionPage(
-                child: Cards(),
-              ),
-                routes:[
+                path: '/a',
+                pageBuilder: (context, state) => NoTransitionPage(
+                      child: Cards(),
+                    ),
+                routes: [
                   GoRoute(
                     path: 'supplementRoute',
                     parentNavigatorKey: _shellNavigatorHomeKey,
                     pageBuilder: (context, state) => NoTransitionPage(
                       child: SupplementScreen(
-                          label: 'supplement', detailsPath: '/a/supplementRoute'),
+                          label: 'supplement',
+                          detailsPath: '/a/supplementRoute'),
                     ),
                     routes: [
                       GoRoute(
                         path: 'supplementRoute',
                         parentNavigatorKey: _shellNavigatorHomeKey,
                         builder: (context, state) =>
-                        const SupplementPage(label: 'supplement'),
+                            const SupplementPage(label: 'supplement'),
                       ),
                     ],
                   ),
@@ -86,13 +88,15 @@ final goRouter = GoRouter(
                     path: 'skincareRoute',
                     parentNavigatorKey: _shellNavigatorHomeKey,
                     pageBuilder: (context, state) => NoTransitionPage(
-                      child: SkincareScreen(label: 'skincare', detailsPath: '/a/skincareRoute'),
+                      child: SkincareScreen(
+                          label: 'skincare', detailsPath: '/a/skincareRoute'),
                     ),
                     routes: [
                       GoRoute(
                         path: 'skincareRoute',
                         parentNavigatorKey: _shellNavigatorHomeKey,
-                        builder: (context, state) => const SkincarePage(label: 'skincare'),
+                        builder: (context, state) =>
+                            const SkincarePage(label: 'skincare'),
                       ),
                     ],
                   ),
@@ -100,13 +104,15 @@ final goRouter = GoRouter(
                     path: 'makeupRoute',
                     parentNavigatorKey: _shellNavigatorHomeKey,
                     pageBuilder: (context, state) => NoTransitionPage(
-                      child: MakeupScreen(label: 'makeupRoute', detailsPath: '/a/makeupRoute'),
+                      child: MakeupScreen(
+                          label: 'makeupRoute', detailsPath: '/a/makeupRoute'),
                     ),
                     routes: [
                       GoRoute(
                         path: 'makeupRoute',
                         parentNavigatorKey: _shellNavigatorHomeKey,
-                        builder: (context, state) => const MakeupPage(label: 'makeup'),
+                        builder: (context, state) =>
+                            const MakeupPage(label: 'makeup'),
                       ),
                     ],
                   ),
@@ -114,18 +120,20 @@ final goRouter = GoRouter(
                     path: 'noProductsRoute',
                     parentNavigatorKey: _shellNavigatorHomeKey,
                     pageBuilder: (context, state) => NoTransitionPage(
-                      child: NoProductsScreen(label: 'noProducts', detailsPath: '/a/noProductsRoute'),
+                      child: NoProductsScreen(
+                          label: 'noProducts',
+                          detailsPath: '/a/noProductsRoute'),
                     ),
                     routes: [
                       GoRoute(
                         path: 'noProductsRoute',
                         parentNavigatorKey: _shellNavigatorHomeKey,
-                        builder: (context, state) => const NoProductsPage(label: 'noProducts'),
+                        builder: (context, state) =>
+                            const NoProductsPage(label: 'noProducts'),
                       ),
                     ],
                   ),
-                ]
-            ),
+                ]),
           ],
         ),
         StatefulShellBranch(
@@ -193,12 +201,12 @@ final goRouter = GoRouter(
               path: '/e',
               pageBuilder: (context, state) => const NoTransitionPage(
                 child:
-                    SettingsRootScreen(label: 'E', detailsPath: '/e/settings'),
+                    SettingsRootScreen(label: 'E', detailsPath: '/e/shareappPage'),
               ),
               routes: [
                 GoRoute(
-                  path: 'settings',
-                  builder: (context, state) => SettingsView(),
+                  path: 'shareappPage',
+                  builder: (context, state) => ShareApp(),
                 ),
               ],
             ),
@@ -425,6 +433,54 @@ class SettingsRootScreen extends StatelessWidget {
           Positioned(
             child: SettingsView(),
           ),
+          Positioned(
+            left: MediaQuery.of(context).size.width * 0.4,
+            width: 80.0,
+            top:  MediaQuery.of(context).size.height * 0.5,
+            height: 70.0,
+            child: //Share App
+                Container(
+                  constraints: BoxConstraints(
+                    minWidth: 80.0,
+                    maxWidth: 80.0,
+                    minHeight: 70.0,
+                    maxHeight: 70.0,
+                  ),
+                  child: Card(
+                    color: Colors.green.shade300,
+                    shadowColor: Colors.grey,
+                    surfaceTintColor: Colors.blue,
+                    elevation: 15.0,
+                    shape: const UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                        width: 1.0,
+                        style: BorderStyle.solid,
+                      ),
+                      borderRadius: BorderRadius.horizontal(
+                        right: Radius.circular(10.0),
+                        left: Radius.circular(10.0),
+                      ),
+                    ),
+                    borderOnForeground: true,
+                    margin: const EdgeInsets.only(
+                      left: 10.0,
+                    ),
+                    clipBehavior: Clip.hardEdge,
+                    semanticContainer: true,
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.share,
+                        size: 25.0,
+                        color: Colors.white,
+                      ),
+                      iconSize: 25.0,
+                      onPressed: () =>
+                          context.go( detailsPath!),
+                    ),
+                  ),
+                ),
+          ),
         ],
       ),
     );
@@ -457,7 +513,6 @@ class SupplementScreen extends StatelessWidget {
           ),
         ],
       ),
-
     );
   }
 }
@@ -524,7 +579,8 @@ class MakeupScreen extends StatelessWidget {
 /// Widget for the root/initial pages in the bottom navigation bar.
 class NoProductsScreen extends StatelessWidget {
   /// Creates a RootScreen
-  const NoProductsScreen({required this.label, required this.detailsPath, Key? key})
+  const NoProductsScreen(
+      {required this.label, required this.detailsPath, Key? key})
       : super(key: key);
 
   /// The label
