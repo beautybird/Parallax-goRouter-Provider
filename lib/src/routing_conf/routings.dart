@@ -72,8 +72,7 @@ final goRouter = GoRouter(
                     parentNavigatorKey: _shellNavigatorHomeKey,
                     pageBuilder: (context, state) => NoTransitionPage(
                       child: SupplementScreen(
-                          label: 'first',
-                          detailsPath: '/a/firstRoute'),
+                          label: 'first', detailsPath: '/a/firstRoute'),
                     ),
                     routes: [
                       GoRoute(
@@ -366,9 +365,6 @@ class RegisterRootScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double? width = MediaQuery.sizeOf(context).width;
-    double? height = MediaQuery.sizeOf(context).height;
-
     return Scaffold(
       body: Stack(
         children: [
@@ -396,9 +392,6 @@ class ContactsRootScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double? width = MediaQuery.sizeOf(context).width;
-    double? height = MediaQuery.sizeOf(context).height;
-
     return Scaffold(
       body: Stack(
         children: [
@@ -426,9 +419,6 @@ class SettingsRootScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double? width = MediaQuery.sizeOf(context).width;
-    double? height = MediaQuery.sizeOf(context).height;
-
     return Scaffold(
       body: Stack(
         children: [
@@ -503,9 +493,6 @@ class SupplementScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double? width = MediaQuery.sizeOf(context).width;
-    double? height = MediaQuery.sizeOf(context).height;
-
     return Scaffold(
       body: Stack(
         children: [
@@ -533,9 +520,6 @@ class SkincareScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double? width = MediaQuery.sizeOf(context).width;
-    double? height = MediaQuery.sizeOf(context).height;
-
     return Scaffold(
       body: Stack(
         children: [
@@ -562,9 +546,6 @@ class MakeupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double? width = MediaQuery.sizeOf(context).width;
-    double? height = MediaQuery.sizeOf(context).height;
-
     return Scaffold(
       body: Stack(
         children: [
@@ -592,9 +573,6 @@ class NoProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double? width = MediaQuery.sizeOf(context).width;
-    double? height = MediaQuery.sizeOf(context).height;
-
     return Scaffold(
       body: Stack(
         children: [

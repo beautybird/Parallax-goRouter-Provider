@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:another_flushbar/flushbar.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:myandroidapp/src/models/models.dart';
@@ -128,7 +126,6 @@ class _CardsState extends State<Cards> {
                         setState(() {
                           context.go('/a/firstRoute');
                         });
-                        print('supplement');
                         /*setState(() {
                           Flushbar(
                             duration: Duration(seconds: 5),
@@ -199,7 +196,6 @@ class _CardsState extends State<Cards> {
                         setState(() {
                           context.go('/a/secondRoute');
                         });
-                        print(cardProvider!.category);
                         /*setState(() {
                           Flushbar(
                             duration: Duration(seconds: 5),
