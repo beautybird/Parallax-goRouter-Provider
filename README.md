@@ -18,7 +18,7 @@ It's a project in progress :)
 
     b- We use the Supabase cloud framework .
 
-![](/home/momy/Videos/parrallax.mp4)
+<img src="/home/momy/Videos/parrallax.mp4"/>
 
 What this course about  [](https://youtu.be/3jCsLWhw8T0)
 
