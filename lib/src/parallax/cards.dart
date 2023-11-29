@@ -105,7 +105,8 @@ class _CardsState extends State<Cards> {
                     ///When any image clicked...will redirect to corresponding
                     ///category page
                     if (cardProvider!.category == null ||
-                        cardProvider!.category!.isEmpty) {
+                        cardProvider!.category!.isEmpty ||
+                        cardProvider!.category!.contains('First')) {
                       //
                       Models()
                           .fetch('First')!
@@ -117,7 +118,7 @@ class _CardsState extends State<Cards> {
                           ///We load the result of the new search
                           productsSearchProvider!
                               .setProductsSearchList(productsSearchFuture);
-                          context.go('/a/supplementRoute');
+                          context.go('/a/firstRoute');
                         } else {
                           productsSearchProvider!.setProductsSearchList([]);
                           context.go('/a/noProductsRoute');
@@ -125,6 +126,10 @@ class _CardsState extends State<Cards> {
                       }).onError((error, stackTrace) {
                         //
                         setState(() {
+                          context.go('/a/firstRoute');
+                        });
+                        print('supplement');
+                        /*setState(() {
                           Flushbar(
                             duration: Duration(seconds: 5),
                             title: 'generalUse-sorry'.tr().toString(),
@@ -166,7 +171,7 @@ class _CardsState extends State<Cards> {
                             positionOffset: 0.0,
                             flushbarStyle: FlushbarStyle.FLOATING,
                           )..show(context);
-                        });
+                        });*/
                       }).whenComplete(() => null);
                     } else {
                       //
@@ -180,16 +185,10 @@ class _CardsState extends State<Cards> {
                           ///We load the result of the new search
                           productsSearchProvider!
                               .setProductsSearchList(productsSearchFuture);
-                          if (cardProvider!.category!.contains('Third')) {
-                            context.go('/a/makeupRoute');
-                          } else if (cardProvider!.category!
-                              .contains('Second')) {
-                            context.go('/a/skincareRoute');
-                          } else if (cardProvider!.category!
-                              .contains('Perfume')) {
-                            context.go('/a/perfumeRoute');
+                          if (cardProvider!.category!.contains('Second')) {
+                            context.go('/a/secondRoute');
                           } else {
-                            context.go('/a/coffeeRoute');
+                            context.go('/a/thirdRoute');
                           }
                         } else {
                           productsSearchProvider!.setProductsSearchList([]);
@@ -198,6 +197,10 @@ class _CardsState extends State<Cards> {
                       }).onError((error, stackTrace) {
                         //
                         setState(() {
+                          context.go('/a/secondRoute');
+                        });
+                        print(cardProvider!.category);
+                        /*setState(() {
                           Flushbar(
                             duration: Duration(seconds: 5),
                             title: 'generalUse-sorry'.tr().toString(),
@@ -239,7 +242,7 @@ class _CardsState extends State<Cards> {
                             positionOffset: 0.0,
                             flushbarStyle: FlushbarStyle.FLOATING,
                           )..show(context);
-                        });
+                        });*/
                       }).whenComplete(() => null);
                     }
                   },
@@ -249,6 +252,7 @@ class _CardsState extends State<Cards> {
                 cardProvider!.setMediaIndex(i);
                 cardProvider!.setAssetPath(MediaAssets.images[i]);
                 cardProvider!.setIsSelected(true);
+                cardProvider!.setCategory('');
                 cardProvider!.setCategory(MediaAssets.categories[i]);
               },
             ),

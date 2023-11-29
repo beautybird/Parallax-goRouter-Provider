@@ -68,35 +68,37 @@ final goRouter = GoRouter(
                     ),
                 routes: [
                   GoRoute(
-                    path: 'supplementRoute',
+                    path: 'firstRoute',
                     parentNavigatorKey: _shellNavigatorHomeKey,
                     pageBuilder: (context, state) => NoTransitionPage(
                       child: SupplementScreen(
-                          label: 'supplement',
-                          detailsPath: '/a/supplementRoute'),
+                          label: 'first',
+                          detailsPath: '/a/firstRoute'),
                     ),
                     routes: [
                       GoRoute(
-                        path: 'supplementRoute',
+                        path: 'firstRoute',
                         parentNavigatorKey: _shellNavigatorHomeKey,
                         builder: (context, state) =>
-                            const SupplementPage(label: 'supplement'),
+                            const SupplementPage(label: 'first'),
                       ),
                     ],
                   ),
                   GoRoute(
-                    path: 'skincareRoute',
+                    path: 'secondRoute',
                     parentNavigatorKey: _shellNavigatorHomeKey,
                     pageBuilder: (context, state) => NoTransitionPage(
                       child: SkincareScreen(
-                          label: 'skincare', detailsPath: '/a/skincareRoute'),
+                        label: 'second',
+                        detailsPath: '/a/secondRoute',
+                      ),
                     ),
                     routes: [
                       GoRoute(
-                        path: 'skincareRoute',
+                        path: 'secondRoute',
                         parentNavigatorKey: _shellNavigatorHomeKey,
                         builder: (context, state) =>
-                            const SkincarePage(label: 'skincare'),
+                            const SkincarePage(label: 'second'),
                       ),
                     ],
                   ),
@@ -200,8 +202,8 @@ final goRouter = GoRouter(
             GoRoute(
               path: '/e',
               pageBuilder: (context, state) => const NoTransitionPage(
-                child:
-                    SettingsRootScreen(label: 'E', detailsPath: '/e/shareappPage'),
+                child: SettingsRootScreen(
+                    label: 'E', detailsPath: '/e/shareappPage'),
               ),
               routes: [
                 GoRoute(
@@ -436,50 +438,49 @@ class SettingsRootScreen extends StatelessWidget {
           Positioned(
             left: MediaQuery.of(context).size.width * 0.4,
             width: 80.0,
-            top:  MediaQuery.of(context).size.height * 0.5,
+            top: MediaQuery.of(context).size.height * 0.5,
             height: 70.0,
             child: //Share App
                 Container(
-                  constraints: BoxConstraints(
-                    minWidth: 80.0,
-                    maxWidth: 80.0,
-                    minHeight: 70.0,
-                    maxHeight: 70.0,
+              constraints: BoxConstraints(
+                minWidth: 80.0,
+                maxWidth: 80.0,
+                minHeight: 70.0,
+                maxHeight: 70.0,
+              ),
+              child: Card(
+                color: Colors.green.shade300,
+                shadowColor: Colors.grey,
+                surfaceTintColor: Colors.blue,
+                elevation: 15.0,
+                shape: const UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                    width: 1.0,
+                    style: BorderStyle.solid,
                   ),
-                  child: Card(
-                    color: Colors.green.shade300,
-                    shadowColor: Colors.grey,
-                    surfaceTintColor: Colors.blue,
-                    elevation: 15.0,
-                    shape: const UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                        width: 1.0,
-                        style: BorderStyle.solid,
-                      ),
-                      borderRadius: BorderRadius.horizontal(
-                        right: Radius.circular(10.0),
-                        left: Radius.circular(10.0),
-                      ),
-                    ),
-                    borderOnForeground: true,
-                    margin: const EdgeInsets.only(
-                      left: 10.0,
-                    ),
-                    clipBehavior: Clip.hardEdge,
-                    semanticContainer: true,
-                    child: IconButton(
-                      icon: Icon(
-                        Icons.share,
-                        size: 25.0,
-                        color: Colors.white,
-                      ),
-                      iconSize: 25.0,
-                      onPressed: () =>
-                          context.go( detailsPath!),
-                    ),
+                  borderRadius: BorderRadius.horizontal(
+                    right: Radius.circular(10.0),
+                    left: Radius.circular(10.0),
                   ),
                 ),
+                borderOnForeground: true,
+                margin: const EdgeInsets.only(
+                  left: 10.0,
+                ),
+                clipBehavior: Clip.hardEdge,
+                semanticContainer: true,
+                child: IconButton(
+                  icon: Icon(
+                    Icons.share,
+                    size: 25.0,
+                    color: Colors.white,
+                  ),
+                  iconSize: 25.0,
+                  onPressed: () => context.go(detailsPath!),
+                ),
+              ),
+            ),
           ),
         ],
       ),

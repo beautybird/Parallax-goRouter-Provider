@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class SupplementPage extends StatefulWidget {
-  static const routeName = "/supplementRoute";
+  static const routeName = "/firstRoute";
   final SettingsController? controller;
   final String? label;
   const SupplementPage({super.key, this.label, this.controller});
@@ -15,12 +15,13 @@ class SupplementPage extends StatefulWidget {
 }
 
 class _SupplementPageState extends State<SupplementPage> {
-
   ///Locale
   LocaleProvider? localeProvider;
   String? selectedLocaleCode;
+
   ///Products provider
   ProductsSearchProvider? productsSearchProvider;
+
   ///
 
   @override
@@ -43,6 +44,14 @@ class _SupplementPageState extends State<SupplementPage> {
     //
     productsSearchProvider = Provider.of<ProductsSearchProvider>(context);
     //
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          ' First Page',
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Colors.orange,
+      ),
+    );
   }
 }
