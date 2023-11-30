@@ -18,7 +18,7 @@ It's a project in progress :)
     
       b- We use the Supabase cloud framework .
 
-
+![parralax_card.png](..%2F..%2FVideos%2Fparralax_card.png)
 
 1- https://youtu.be/3jCsLWhw8T0
 
