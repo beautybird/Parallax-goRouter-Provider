@@ -17,8 +17,7 @@ It's a project in progress :)
     a- We use model class to connect the app to the database.
     
       b- We use the Supabase cloud framework .
-      
- ![Uploading parralax_card.png…]()
+
 
 
 1- https://youtu.be/3jCsLWhw8T0
