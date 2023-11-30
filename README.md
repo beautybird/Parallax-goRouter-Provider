@@ -20,6 +20,8 @@ It's a project in progress :)
 
 ![parralax_card.png](..%2F..%2FVideos%2Fparralax_card.png)
 
+![](/home/momy/Videos/parrallax.mp4)
+
 1- https://youtu.be/3jCsLWhw8T0
 
 ## Getting Started
