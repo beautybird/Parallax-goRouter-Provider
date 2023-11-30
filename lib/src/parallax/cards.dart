@@ -122,7 +122,8 @@ class _CardsState extends State<Cards> {
                           context.go('/a/noProductsRoute');
                         }
                       }).onError((error, stackTrace) {
-                        //
+                        //since we have no DB connection, so we temporarlly
+                        //navigate to firstRoute
                         setState(() {
                           context.go('/a/firstRoute');
                         });
