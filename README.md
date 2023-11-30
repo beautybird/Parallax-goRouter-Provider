@@ -20,7 +20,7 @@ It's a project in progress :)
 
 ![parralax_card.png](..%2F..%2FVideos%2Fparralax_card.png)
 
-![](/home/momy/Videos/parrallax.mp4)
+[parrallax.mp4](..%2F..%2FVideos%2Fparrallax.mp4)
 
 1- https://youtu.be/3jCsLWhw8T0
 
