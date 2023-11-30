@@ -15,8 +15,11 @@ It's a project in progress :)
 5- We use the Postgresql database , we use 2 way for the database:
 
     a- We use model class to connect the app to the database.
+    
+      b- We use the Supabase cloud framework .
+      
+![Uploading parralax_card.png…]()
 
-    b- We use the Supabase cloud framework .
 
 1- https://youtu.be/3jCsLWhw8T0
 
