@@ -18,6 +18,8 @@ It's a project in progress :)
 
     b- We use the Supabase cloud framework .
 
+    1- https://youtu.be/3jCsLWhw8T0
+
 ## Getting Started
 
 This project is a starting point for a Flutter application that follows the
