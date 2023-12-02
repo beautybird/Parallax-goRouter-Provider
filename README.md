@@ -1,9 +1,5 @@
 # Parrallax with goRouter
 
-Design A Full Android App With Flutter.
-
-It's a project in progress :)
-
 1- We use the Parallax API to create few pages.
 
 2- We use the goRouter API to manage the routing of the app .
