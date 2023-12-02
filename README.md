@@ -1,4 +1,4 @@
-# myandroidapp
+# Parralax with goRouter
 
 Design A Full Android App With Flutter.
 
