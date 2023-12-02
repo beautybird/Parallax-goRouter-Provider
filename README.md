@@ -12,11 +12,6 @@ It's a project in progress :)
 
 4- We use the Provider API to handle the fetched data from the database and push to any page.
 
-5- We use the Postgresql database , we use 2 way for the database:
-
-    a- We use model class to connect the app to the database.
-    
-      b- We use the Supabase cloud framework .
 
 ![parralax_card.png](..%2F..%2FVideos%2Fparralax_card.png)
 
