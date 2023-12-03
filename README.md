@@ -13,6 +13,10 @@
 
 1- https://youtu.be/3jCsLWhw8T0
 
+2- https://youtu.be/yp5QtE4_yDY
+
+3- https://youtu.be/iUNnbXyTq6s
+
 ## Getting Started
 
 This project is a starting point for a Flutter application that follows the

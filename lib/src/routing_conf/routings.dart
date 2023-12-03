@@ -220,8 +220,9 @@ final goRouter = GoRouter(
     ),
   ],
   errorPageBuilder: (context, state) => NoTransitionPage(
-  child: ErrorPageScreen(label: 'noProducts', detailsPath: '/errorRoute'),
+  child: ErrorPageScreen(label: 'error', detailsPath: '/errorRoute'),
   ),
+
 );
 
 class ScaffoldWithNavigationBar extends StatelessWidget {
