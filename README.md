@@ -6,11 +6,6 @@
 
 3- We use the goRouter API to assign for each parallax page to navigate to a certain page that we assign.
 
-4- We use the Provider API to handle the fetched data from the database and push to any page.
-
-
-![parralax_card.png](..%2F..%2FVideos%2Fparralax_card.png)
-
 1- https://youtu.be/3jCsLWhw8T0
 
 2- https://youtu.be/yp5QtE4_yDY
