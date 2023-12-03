@@ -3,12 +3,14 @@ import 'package:myandroidapp/src/products/makeup_page.dart';
 import 'package:myandroidapp/src/products/skincare_page.dart';
 import 'package:myandroidapp/src/products/supplement_page.dart';
 import 'package:myandroidapp/src/routes/contactus.dart';
+import 'package:myandroidapp/src/routes/error.dart';
 import 'package:myandroidapp/src/routes/forgot_password.dart';
 import 'package:myandroidapp/src/routes/login.dart';
 import 'package:myandroidapp/src/routes/noproducts_page.dart';
 import 'package:myandroidapp/src/routes/shareapp.dart';
 import 'package:myandroidapp/src/routes/signup.dart';
 import 'package:myandroidapp/src/routes/splash.dart';
+import 'package:myandroidapp/src/routing_conf/constants.dart';
 import 'package:myandroidapp/src/routing_conf/nestedNAvigator.dart';
 import 'package:myandroidapp/src/settings/settings_view.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -39,6 +41,7 @@ final goRouter = GoRouter(
   routes: [
     GoRoute(
       path: '/',
+      name: AppRoutingConstants.splashPage,
       parentNavigatorKey: _rootNavigatorKey,
       pageBuilder: (context, state) => NoTransitionPage(
         child: SplashPage(label: 'splash', detailsPath: '/cardsRoute'),
@@ -216,6 +219,9 @@ final goRouter = GoRouter(
       ],
     ),
   ],
+  errorPageBuilder: (context, state) => NoTransitionPage(
+  child: ErrorPageScreen(label: 'noProducts', detailsPath: '/errorRoute'),
+  ),
 );
 
 class ScaffoldWithNavigationBar extends StatelessWidget {
@@ -578,6 +584,33 @@ class NoProductsScreen extends StatelessWidget {
         children: [
           Positioned(
             child: NoProductsPage(),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Widget for the root/initial pages in the bottom navigation bar.
+class ErrorPageScreen extends StatelessWidget {
+  /// Creates a RootScreen
+  const ErrorPageScreen(
+      {required this.label, required this.detailsPath, Key? key})
+      : super(key: key);
+
+  /// The label
+  final String? label;
+
+  /// The path to the detail page
+  final String? detailsPath;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Positioned(
+            child: ErrorPage(),
           ),
         ],
       ),

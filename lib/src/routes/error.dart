@@ -5,8 +5,8 @@ class ErrorPage extends StatelessWidget {
 
   static const routeName = '/errorRoute';
   final SettingsController? controller;
-
-  const ErrorPage({super.key,this.controller});
+  final String? label;
+  const ErrorPage({super.key,this.controller,this.label});
 
   @override
   Widget build(BuildContext context) {
