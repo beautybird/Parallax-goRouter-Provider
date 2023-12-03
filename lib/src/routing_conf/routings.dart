@@ -102,15 +102,15 @@ final goRouter = GoRouter(
                     ],
                   ),
                   GoRoute(
-                    path: 'makeupRoute',
+                    path: 'thirdRoute',
                     parentNavigatorKey: _shellNavigatorHomeKey,
                     pageBuilder: (context, state) => NoTransitionPage(
                       child: MakeupScreen(
-                          label: 'makeupRoute', detailsPath: '/a/makeupRoute'),
+                          label: 'thirdRoute', detailsPath: '/a/thirdRoute'),
                     ),
                     routes: [
                       GoRoute(
-                        path: 'makeupRoute',
+                        path: 'thirdRoute',
                         parentNavigatorKey: _shellNavigatorHomeKey,
                         builder: (context, state) =>
                             const MakeupPage(label: 'makeup'),
